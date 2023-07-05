@@ -1,0 +1,17 @@
+<div class="datepicker-container">
+  <bs-datepicker-inline
+    [bsConfig]="bsConfig"
+    [(bsValue)]="date">
+  </bs-datepicker-inline>
+  
+  <div class="datepicker-header">
+    <span class="day">{{ date?.getDate() }}</span>
+    <span class="month">{{ date?.getMonth() + 1 }}</span>
+    <span class="year">{{ date?.getFullYear() }}</span>
+  </div>
+
+  <div class="datepicker-footer">
+    <button (click)="saveDate()">Save</button>
+    <button (click)="cancelDate()">Cancel</button>
+  </div>
+</div>
